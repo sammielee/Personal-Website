@@ -1,0 +1,117 @@
+#intro {
+    display: flex;
+    flex-direction: row;
+    /* this puts the text next to the photo */
+    justify-content: space-around;
+}
+
+#intro p {
+    animation-name: move-left;
+    animation-duration: 2s;
+   /* white-space: nowrap; */ /* text doesn't wrap arounf */
+    position: relative;
+    margin-right: 200px;
+    margin-top: 200px;
+}
+
+/* keyframes is a psuedoselector */
+@keyframes move-left {
+    0% {
+        left: 250px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+body {
+    font-family: 'Heebo', sans-serif;
+    /* can use hex, rgb, hsl (hue, saturation, lightness), 
+    can change opacity by adding an a */
+    font-size: 30px;
+    color: white; 
+}
+
+#me {
+    height: 500px;
+    width: 500px;
+    object-fit: cover;
+    /* this crops my photo to fit in the specified dimensions */
+    padding: 90px;
+    /* put space around stuff 4 numbers: top, right, bottom, left
+    could also be 1 or 2 numbers */
+}
+
+.highlight
+{ /* span class can format multiple things at once */
+    color: white;
+    /* color changes text color */
+}
+
+.topnav {
+    overflow: hidden;
+    position: fixed;
+    background-color: #313e61;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+.topnav a {
+    float: right;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    left: 0;
+}
+
+p {
+    z-index: -1;
+    text-align: center;
+}
+
+/* active is the psuedo selector for a button being pushed */
+.topnav a.active {
+    background-color: #fbd2c9;
+}
+
+.topnav a:hover {
+    background-color: #fbd2c9;
+}
+
+#education {
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    color: #313e61;
+    font-family: 'Playfair Display', serif;
+    font-size: 80px;
+}
+
+.circle {
+    height: 75px;
+    width: 75px;
+    display: inline-flex; 
+    justify-content: center;
+    background-color: #FBD2C9;
+    border-radius: 50%;
+    border: 1px solid white;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    line-height: 75px;
+}
+
+h2 {
+    text-align:center;
+    color: #313e61;
+    font-family: 'Playfair Display', serif;
+}
+
+.skillButtons {
+    text-align:center;
+}
